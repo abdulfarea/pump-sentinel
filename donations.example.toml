@@ -1,0 +1,9 @@
+# Dados destinados à divulgação pública APENAS depois de revisão do mantenedor.
+# Copie para donations.toml; a confirmação abaixo é uma revisão humana,
+# NÃO uma prova criptográfica de propriedade da carteira.
+enabled = false
+maintainer_verified = false
+project_label = "Pump Sentinel — apoio voluntário"
+recipient = "" # carteira pública de recebimento Solana
+accepted_mints = [] # endereços mint verificados; vazio = instruções apenas para SOL
+# Nunca use azul777/suhail777/Suhail777 no lugar de um endereço mint.

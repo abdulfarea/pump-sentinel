@@ -1,0 +1,19 @@
+# Copie para config.toml. Use ENDEREÇOS MINT, nunca símbolo ou nome de perfil.
+# Nenhuma chave privada ou seed phrase deve aparecer neste arquivo.
+wallet = "" # endereço público Solana opcional
+mints = [] # ex.: ["ENDERECO_MINT_VERIFICADO"]
+interval_seconds = 60
+max_cycles = 0 # 0 = contínuo quando você executar explicitamente `watch`
+state_path = "./data/sentinel.sqlite3"
+kill_switch_path = "./PAUSE"
+max_history = 10000
+
+# Apenas contas de token comprovadamente pertencentes a reservas/custódia.
+# Não exclua uma conta apenas porque ela é grande. Exclusões reduzem visibilidade.
+excluded_accounts = []
+
+[policy]
+max_single_account_pct = 20.0
+max_top10_accounts_pct = 60.0
+max_data_age_seconds = 120.0
+max_slot_skew = 150
