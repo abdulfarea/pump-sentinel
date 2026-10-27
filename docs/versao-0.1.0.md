@@ -2,7 +2,7 @@
 
 Foi implementado um pacote Python com CLI, coletor Solana somente leitura, motor de risco explicável, observação automática de variação de saldo, auditoria local SQLite, deduplicação de alertas, heartbeat, kill switch, instruções separadas de doação voluntária e licença MIT.
 
-A suíte local passou com **52 testes offline** e o lint Ruff sem erros. Ela inclui mocks HTTP, horários e cenários de dados parciais, além de dois ciclos de monitoramento simulado. A demonstração é fictícia. Esses resultados verificam comportamento do código nos cenários testados; não demonstram detecção de fraudes no mundo real ou segurança absoluta.
+A suíte local passou com **53 testes offline** e o lint Ruff sem erros. Ela inclui mocks HTTP, horários e cenários de dados parciais, além de dois ciclos de monitoramento simulado. A demonstração é fictícia. Esses resultados verificam comportamento do código nos cenários testados; não demonstram detecção de fraudes no mundo real ou segurança absoluta.
 
 Não foram ativados monitoramento de um token específico, transferências, assinaturas, compras/vendas, doações, notificações privadas ou hospedagem 24/7. Não foi feito teste de eficácia contra scams reais nem auditoria de segurança independente.
 

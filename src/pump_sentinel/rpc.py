@@ -303,7 +303,7 @@ class SolanaReader:
                 mint_malformed = True
             else:
                 owner = value.get("owner")
-                if owner not in TOKEN_PROGRAM_IDS:
+                if not isinstance(owner, str) or owner not in TOKEN_PROGRAM_IDS:
                     mint_malformed = True
                 else:
                     # The parsed `program` label is usually `spl-token`, while

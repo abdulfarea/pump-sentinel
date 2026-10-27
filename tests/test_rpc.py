@@ -488,3 +488,17 @@ def test_more_than_twenty_largest_accounts_fails_closed():
         assert reader.snapshot(MINT)["complete"] is False
     finally:
         reader.close()
+
+
+def test_unhashable_program_owner_is_incomplete_not_crash():
+    def handler(request):
+        method = json.loads(request.content)["method"]
+        result = mint_result(owner=["malformed"]) if method == "getAccountInfo" else largest_result(values=[])
+        return httpx.Response(200, json=envelope(result))
+    reader = reader_for(handler)
+    try:
+        snapshot = reader.snapshot(MINT)
+        assert snapshot["complete"] is False
+        assert snapshot["program"] is None
+    finally:
+        reader.close()
